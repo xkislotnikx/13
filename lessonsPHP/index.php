@@ -16,7 +16,7 @@ $year = strftime('%y');
         <?php
         //вывод даты и времени
         //echo strftime('Сегодня %d-%m-%y');
-        echo 'Сегодня',$day,$mon,$year;
+        echo 'Сегодня ',$day,'.',$mon,'.',$year;
         ?>
         </blockquote>
 
@@ -27,7 +27,10 @@ $year = strftime('%y');
         echo AAA,'<br>';
         echo BBB;
         ?>
+        
         <?php
         ?>
+        
+        
     </body>
 </html>
