@@ -1,0 +1,551 @@
+body{
+	/*margin-top:100px;*/
+}
+h1{
+	position:relative;
+	padding:10px;
+}
+#pomeshenie1, 
+#stolovka,  #ministolovka,
+#razdevalka_m, 
+#razdevalka_zh, 
+#lestnica, #left_les, 
+#tualet, 
+#lifts, #lift1, #lift2, 
+#zakutok, 
+#koridor, 
+#ofis, #miniofis, 
+#stelazhi, #rashodniki_1, #rashodniki_2, #stel_0, #stel_1, #stel_2, #stel_3, #stel_4, #stel_5, #stel_6, #stel_7, #stel_8, #stel_9, #stel_10, #stel_11, #stel_12, #stel_13, #stel_14, #sir_1, #sir_2, #sir_3, #sir_4, 
+#kolonni, #kolonna1, #kolonna2, #kolonna3, #kolonna4, #kolonna5, #kolonna6, #kolonna7, #kolonna8, #kolonna9, #kolonna10, #kolonna11, #kolonna12, #kolonna13, #kolonna14, #kolonna15, #kolonna16, #kolonna17, #kolonna18, 
+#kolonna19, #kolonna20, #kolonna21, #kolonna22, #kolonna23, #kolonna24, #kolonna25, #kolonna26, #kolonna27, #kolonna28, #kolonna29, #kolonna30, 
+#fasovki, #fasovka1, #fasovka2, #fasovka3, #fasovka4
+{
+	-moz-box-sizing: border-box; /* Для Firefox */
+    -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+    box-sizing: border-box; /* Для IE и Opera */
+}
+#kolonna1, #kolonna2, #kolonna3, #kolonna4, #kolonna5, #kolonna6, #kolonna7, #kolonna8, #kolonna9, #kolonna10, #kolonna11, #kolonna12, #kolonna13, #kolonna14, #kolonna15, #kolonna16, #kolonna17, #kolonna18, 
+#kolonna19, #kolonna20, #kolonna21, #kolonna22, #kolonna23, #kolonna24, #kolonna25, #kolonna26, #kolonna27, #kolonna28, #kolonna29, #kolonna30
+{
+	width:8mm;
+	height:8mm;
+	background:#777;
+	border: 1mm solid black;
+}
+#rashodniki_1, #rashodniki_2, #stel_0, #stel_1, #stel_2, #stel_3, #stel_4, #stel_5, #stel_6, #stel_7, #stel_8, #stel_9, #stel_10, #stel_11, #stel_12, #stel_13, #stel_14 
+{
+	background:#F00;
+	border: 1mm solid black;
+	box-shadow:5px 5px 5px;
+}
+#sclad{
+	width:360mm;
+	height:262mm;
+	background:#FFF;
+	margin:0 auto;
+	border: 2mm solid black;
+}
+#pomeshenie1{
+	background:#FFF;
+	width:62mm;
+	height:100%;
+	margin-left:0 auto;
+}
+#stolovka{
+	width:100%;
+	height:20mm;
+	background:#FFF;
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#razdevalka_m{
+	width:30mm;
+	height:21mm;
+	background:#FFF;
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#razdevalka_zh{
+	width:30mm;
+	height:42mm;
+	background:#FFF;
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#lestnica{
+	width:30mm;
+	height:58mm;
+	background: repeating-linear-gradient(0deg, #000, #000 1px, #FFF 1px, #FFF 20px);
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#left_les{
+	width:50%;
+	height:100%;
+	background: repeating-linear-gradient(0deg, #000, #000 1px, #FFF 1px, #FFF 20px);
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#tualet{
+	width:50%;
+	height:51mm;
+	background: #FFF;
+	margin-left:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	left:30mm;
+	top:-14mm;
+}
+#lifts{
+	width:89%;
+	height:60mm;
+	background: #777;
+	margin-left:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	top:-14mm;
+}
+#lift1{
+	width:100%;
+	height:45%;
+	background: #FFF;
+	margin-left:0 auto;
+	margin-bottom:12%;
+	border: 1mm solid black;
+}
+#lift2{
+	width:100%;
+	height:45%;
+	background: #FFF;
+	margin-left:0 auto;
+	border: 1mm solid black;
+}
+#zakutok{
+	width:100%;
+	height:19mm;
+	/*background: #FFF;*/
+	margin-left:0 auto;
+	position:relative;
+	top:-116mm;
+}
+#koridor{
+	width:50%;
+	height:109mm;
+	background: #FFF;
+	margin-left:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	left:30mm;
+	top:-232mm;
+}
+#ofis{
+	background:#FFF;
+	width:180mm;
+	height:129mm;
+	margin-left:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	left:60mm;
+	bottom:100%;
+}
+#miniofis{
+	background:#FFF;
+	width:65mm;
+	height:30mm;
+	margin-left:0 auto;
+	border: 1mm solid black;
+	position:relative;
+	left:83mm;
+	bottom:100%;
+}
+#ministolovka{
+    background:#FFF;
+	width:46%;
+	height:100%;
+	margin-right:0 auto;
+	border: 1mm solid black;
+	position:relative;
+	left:35mm;
+}
+
+/*____________Стеллажи____________*/
+
+#stelazhi{
+	width:100%;
+	height:100%;
+	/*background:#737;*/
+	margin:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	left:0mm;
+	bottom:421mm;
+}
+#rashodniki_1{
+	width:10mm;
+	height:20mm;
+	position:relative;
+	left:63mm;
+	bottom:-193mm;
+}
+#rashodniki_2{
+	width:10mm;
+	height:20mm;
+	position:relative;
+	left:63mm;
+	bottom:-193mm;
+}
+#stel_0{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:153mm;
+	bottom:-172mm;
+}
+#stel_1{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:172mm;
+	bottom:-132mm;
+}
+#stel_2{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:192mm;
+	bottom:-77mm;
+}
+#stel_3{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:210mm;
+	bottom:-17mm;
+}
+#stel_4{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:231mm;
+	bottom:28mm;
+}
+#stel_5{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:252mm;
+	bottom:83mm;
+}
+#stel_6{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:270mm;
+	bottom:143mm;
+}
+#stel_7{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:290mm;
+	bottom:188mm;
+}
+#stel_8{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:311mm;
+	bottom:243mm;
+}
+#stel_9{
+	width:10mm;
+	height:60mm;
+	position:relative;
+	left:329mm;
+	bottom:303mm;
+}
+#stel_10{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:270mm;
+	bottom:537mm;
+}
+#stel_11{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:270mm;
+	bottom:525mm;
+}
+#stel_12{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:290mm;
+	bottom:617mm;
+}
+#stel_13{
+	width:10mm;
+	height:40mm;
+	position:relative;
+	left:270mm;
+	bottom:565mm;
+}
+#stel_14{
+	width:10mm;
+	height:20mm;
+	position:relative;
+	left:290mm;
+	bottom:649mm;
+}
+#sir_1{
+	width:18mm;
+	height:8mm;
+	background:#AAF;
+	border: 1mm solid black;
+	position:relative;
+	left:114mm;
+	bottom:555mm;
+	box-shadow:5px 5px 5px;
+}
+#sir_2{
+	width:4mm;
+	height:9mm;
+	background:#AAF;
+	border: 1mm solid black;
+	position:relative;
+	left:110mm;
+	bottom:559mm;
+	box-shadow:5px 5px 5px;
+}
+#sir_3{
+	width:9mm;
+	height:4mm;
+	background:#AAF;
+	border: 1mm solid black;
+	position:relative;
+	left:63mm;
+	bottom:564mm;
+	box-shadow:5px 5px 5px;
+}
+#sir_4{
+	width:4mm;
+	height:9mm;
+	background:#AAF;
+	border: 1mm solid black;
+	position:relative;
+	left:63mm;
+	bottom:524mm;
+	box-shadow:5px 5px 5px;
+}
+
+/*____________Колонны____________*/
+
+#kolonni{
+	width:100%;
+	height:100%;	
+	margin:0 auto;
+	border: 2mm solid black;
+	position:relative;
+	left:0mm;
+	bottom:945mm;
+}
+#kolonna1{
+	position:relative;
+	left:55mm;
+	bottom:0mm;
+}
+#kolonna2{
+	position:relative;
+	left:114mm;
+	bottom:8mm;
+}
+#kolonna3{
+	position:relative;
+	left:173mm;
+	bottom:16mm;
+}
+#kolonna4{
+	position:relative;
+	left:232mm;
+	bottom:24mm;
+}
+#kolonna5{
+	position:relative;
+	left:291mm;
+	bottom:32mm;
+}
+#kolonna6{
+	position:relative;
+	left:350mm;
+	bottom:40mm;
+}
+#kolonna7{
+	position:relative;
+	left:55mm;
+	bottom:-15mm;
+}
+#kolonna8{
+	position:relative;
+	left:114mm;
+	bottom:-7mm;
+}
+#kolonna9{
+	position:relative;
+	left:173mm;
+	bottom:1mm;
+}
+#kolonna10{
+	position:relative;
+	left:232mm;
+	bottom:9mm;
+}
+#kolonna11{
+	position:relative;
+	left:291mm;
+	bottom:17mm;
+}
+#kolonna12{
+	position:relative;
+	left:350mm;
+	bottom:25mm;
+}
+#kolonna13{
+	position:relative;
+	left:55mm;
+	bottom:-30mm;
+}
+#kolonna14{
+	position:relative;
+	left:114mm;
+	bottom:-22mm;
+}
+#kolonna15{
+	position:relative;
+	left:173mm;
+	bottom:-14mm;
+}
+#kolonna16{
+	position:relative;
+	left:232mm;
+	bottom:-6mm;
+}
+#kolonna17{
+	position:relative;
+	left:291mm;
+	bottom:2mm;
+}
+#kolonna18{
+	position:relative;
+	left:350mm;
+	bottom:10mm;
+}
+#kolonna19{
+	position:relative;
+	left:55mm;
+	bottom:-45mm;
+}
+#kolonna20{
+	position:relative;
+	left:114mm;
+	bottom:-37mm;
+}
+#kolonna21{
+	position:relative;
+	left:173mm;
+	bottom:-29mm;
+}
+#kolonna22{
+	position:relative;
+	left:232mm;
+	bottom:-21mm;
+}
+#kolonna23{
+	position:relative;
+	left:291mm;
+	bottom:-13mm;
+}
+#kolonna24{
+	position:relative;
+	left:350mm;
+	bottom:-5mm;
+}
+#kolonna25{
+	position:relative;
+	left:55mm;
+	bottom:-60mm;
+}
+#kolonna26{
+	position:relative;
+	left:114mm;
+	bottom:-52mm;
+}
+#kolonna27{
+	position:relative;
+	left:173mm;
+	bottom:-44mm;
+}
+#kolonna28{
+	position:relative;
+	left:232mm;
+	bottom:-36mm;
+}
+#kolonna29{
+	position:relative;
+	left:291mm;
+	bottom:-28mm;
+}
+#kolonna30{
+	position:relative;
+	left:350mm;
+	bottom:-20mm;
+}
+
+/*____________Фасовка____________*/
+
+#fasovki{
+	width:100%;
+	height:100%;	
+	margin:0 auto;
+	border: 1mm solid black;
+	position:relative;
+	left:0mm;
+	bottom:683mm;
+}
+#fasovka1{
+    width:51mm;
+	height:8mm;
+	background:#555;
+	border: 1px solid black;
+	position:relative;
+	left:64mm;
+	top:251mm;
+}
+#fasovka2{
+    width:8mm;
+	height:57mm;
+	background:#555;
+	border-top: 1px solid black;
+	position:relative;
+	left:110mm;
+	top:189mm;
+}
+#fasovka3{
+    width:8mm;
+	height:57mm;
+	background:#555;
+	border: 1px solid black;
+	position:relative;
+	left:118mm;
+	top:132mm;
+}
+#fasovka4{
+    width:51mm;
+	height:9mm;
+	background:#555;
+	border: 1px solid black;
+	position:relative;
+	left:300mm;
+	bottom:121mm;
+}
