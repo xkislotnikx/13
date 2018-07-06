@@ -1,0 +1,156 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+	<head>
+		 
+	<meta charset="utf-8">
+	<title>Инструкция</title>
+	<HTA:APPLICATION
+		APPLICATIONNAME="INSTRUKTION"
+		SCROLL="yes"
+		SCROLLFLAT="yes"
+		SINGLEINSTANCE="yes"
+		WINDOWSTATE="maximize"
+	>
+	<script language = "javascript">
+		function ChangeAbz(id=abz1){
+			if (id.style.display=='none') {
+				id.style.display='block';
+			}
+			else {
+				id.style.display='none';
+			}
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- saved from url=(0014)about:internet -->
+		<h1  align="center">Инструкция по работе МСУ</h1><br>
+		<br>
+		<a href="javascript:ChangeAbz(abz1)">
+		<h2>1. Контроль соответствия данных по остаткам в 1С и фактических:</h2></a>
+		<P id="abz1" style="display: none">
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<a name="planproizvodstv">Сформировать план производств можно следующим образом:</a><br>
+				1.На самой верхней панели нажать <button>Отчёты</button> &#8594 <button>РТН &#9658</button> &#8594 <button>Производство  &#9658</button> &#8594 <button>План производства</button><br><hr color = "black">
+				2.В появившемся окне указать период, за который нужно снять отчёт.<br><hr color = "black">
+				3.Переставить значение на <input type="radio" name="Активные" CHECKED>Активные<br><hr color = "black">
+				4.Нажать кнопку <button>Сформировать</button>
+				</th>
+			</table>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				
+				</th>
+			</table>
+		<h2>2. Печать этикеток на производства:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				1.Сформировать <a href="#planproizvodstv">план производств</a>.<br><hr color = "black">
+				2.Скопировать новые производства из отчёта в файл Excel "Этикетки на производства", на вкладку "план пр."<br><hr color = "black">
+				3.Перейти на вкладку "этикетки" и определить приоритетные производства:<br><hr><text align="left"><i>
+				Как правило, о приоритетных производствах сообщает начальник склада. Если таковых нет то в первую очередь печатать лучше те, на которые имеется в наличии товар и производства на небольшие суммы.
+				</i><br><hr color = "black">
+				4.Открыть производство(<i>это можно следать двумя способами: найти(<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9iP2zf2mtL/Yy/ZQ+InxU1hbCa18B6Bdaulreaiunx6lcRxsbazE7BgklxN5cCYVmLzIFViQp+G/ir/wcm+Bfhz/wTu8E/HGy0vwHrmreLvFGs+Gx4ag8azoYv7OS+k89H/s03Z89YNO2JPYwCP8AtqzM7QI3mHj/APg6G+NnjD4X+F/hrb6dfeL4PAOn6D4r8WeIofDupjTbqDVLRdMsfDWoNMk0MzR2evavp05jikYZVZGik8hQv5f+E/8AglB8fU/4Jt6L4iX4X69beGviR4X0/RfDsdh8Q4Wt9U1vWvFWgXFjrN5YvdxQwW97YvY6eIQJds2lW9xcRQFIpkq7NZNn9NHxJ8U6X47/AGbNe1zRNS0/WtE1rw1cX1hqFjcLdWt/by2rPHNFIhKyRuhVlZTtZSpBxg0V+Z3/AAbKfHrxh8b/APgiJ48tPFviDUPEEPgPWNX8L6CbxxJJp+mRaTZTw2ofG5o43uZggcsUQpGuEjRFKYuY/Sz44fsr/C/9pkaafiT8N/APxA/sTzRp58S+H7TVvsHm7PN8nz432b/Kj3bcbtiZztBGj4k+AHgTxl8IIvh5rHgjwjqngGG1trKPwzeaRb3Gjx29tsNvCLR0MIjiMcZRQmF8tNoXaKKKZZk+D/2W/Afwj+EmveC/h74R8J/DnQ/ECXDXFr4d0W30+1NxNCsL3DQwKiPJ5aINxwWWNQSMCiiik2EtD//Z' />) его в общем списке производств <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAVABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9efj/AOKPGel+L9Kh8J3yxx27QT31kEtzJdW7i5iYoZR1ST7PIfmU7UcDcSEZngD4r33xA1nxNpEeuSWsmn+JJNO0q+jNgyzwNHbyMkkburSmGaS4twYlz+5Cv5kqOS74s/8AJedF/wCwf/Wcf598U79lXRtYk+BnwtuIYdSNiPDOituSVxDtFnb7sqL1Rjhs/uD3+V/4vy3BVs1/15xODqV74aNKFSMLPRzbha99o+zclpvNnpVeT6tGVtbtf1956lo+ow6todncQNI8ckWN7yxSM5VipYtCWjySuTtOMnoDxRRolvdWmhWcd4s6XCo28TOWk/1jYyTNMemP+Wjfh90Ffq2ltTlpq8dblfVvC+l63Os19pun3kygxh5rdHYKCeMkHjOTgccmq6/Dvw+4b/iQ6P8AKM/8eUf/AMTRRWMvj+Qdbf10L+jaPZ6LA0Nja2tnGT5pSCIRqzHAJIHfFFFFdEd2vMTij//Z' /> или дважды щелкнуть по номеру производства в сформированном плане.</i>)<br><hr color = "black">
+				<font color = "red" size = "5">ВНИМАНИЕ!<br>Производство имеет смысл печатать только тогда, когда нет товара на вкладке <button>Потребность</button></font><br><hr color = "black">
+				5.Открыть вкладку <button>Шапка</button> и нажать на кнопку <button>Карточка</button>.<br><hr color = "black">
+				6.В открывшемся окне нажать кнопку <button>Записать</button><br><hr color = "black">
+				7.Распечатать карточку учёта.<br><hr color = "black">
+				8.Распечатать карточку обмера.<br><hr color = "black">
+				9.Из производства распечатать производственную шахматку.<br><hr color = "black">
+				10.Открыть форму печати этикеток.<br><hr color = "black">
+				11.Поставить галочку "Разбить на задания".<br><hr color = "black">
+				12.В области "Дополнительные этикетки"<img src = "16.jpg"> указать количество "5" и нажать на кнопку <button>Добавить всем</button><br><hr color = "black">
+				13.При помощи кнопок <img src = "17.jpg"> упорядочить список по типу этикеток.<br><hr>
+					<text>Типы этикеток с которыми мы работаем:<br><hr><i>
+					PR2 - Этикетка 100х50 с припринтом "Госкрепеж" на пакеты и на 400 контейнеры. Печатается на принтер TSC2<br><hr>
+					PR4 - Этикетка 100х50 с припринтом "Госкрепеж" на 280 контейнеры. Печатается на принтер TSC2<br><hr>
+					PR5 - Этикетка 100х50 с припринтом "Госкрепеж" на коробки без окна Standart. Печатается на принтер TSC2<br><hr>
+					PR37 - Этикетка 40х15 узкая на перфорацию до 60. Печатается на принтер TSC4<br><hr>
+					PR48 - Этикетка 58х30 на подвесы,ярлыки и перфорацию с размером от 60. Печатается на принтер Zebra8<br><hr>
+					PR53 - Этикетка 100х50 с припринтом "Bullit" на крупную фасовку Bullit. Печатается на принтер TSC2<br><hr>
+					PR54 - Этикетка 58х30 на подвесы,ярлыки Bullit. Печатается на принтер TSC2<br><hr>
+					PR55 - Этикетка 58х30 на перфорацию с размером от 60 для Омы. Печатается на принтер Zebra8<br><hr>
+					PR57 - Этикетка 40х15 узкая на перфорацию до 60 для Омы. Печатается на принтер TSC4</i></text><br><hr color = "black">
+				14.Первым делом выбрать все этикетки, которые печатаются на TSC2 и проставить на против их галочки <img src = "15.jpg">.<br><hr color = "black">
+				15.Нажать кнопку <button>Печать этикеток</button><br><hr>
+				Если в появившемся окне нажать <button>Да</button>этикетки будут отправлены на печать<br><hr>
+				Если в появившемся окне нажать <button>Нет</button>откроется предварительный просмотр этикеток<br><hr color = "black">
+				16.После того как печать прекратится нужно нажать <button>ХХ Выд.</button><br><hr color = "black">
+				17.После того как Распечатали все этикетки на TSC2 (или если таковых в данном производстве не было) поочерёдно распечатать этикетки на остальные принтеры.<br><hr>
+				<i>напротив позиции поставить галочку <img src = "15.jpg"> и нажать на кнопку <button>Печать этикеток</button></i><br><hr color = "black">
+				18.После того как печать прекратится нужно нажать <button>ХХ Выд.</button><br><hr color = "black">
+				19.По окончании печати этикеток нужно сложить "Карточку учёта производительности", "Карточку обмера", "Производственную шахматку" и этикетки в файл или в коробку, если этикеток много.<br><hr color = "black">
+				20.В файле Excel "Этикетки на производства", на вкладке "этикетки" поставить "+" в соответствующей ячейке напротив напечатанного производства и указать дату окончания печати.
+ 
+				</th>
+			</table>
+		<h2>3. Инвентаризация склада ГП:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				1. Перемещаем весь товар со склада "В пути" на ГП.
+				</th>
+			</table>
+			<br>
+			<table border="1" bgcolor="#e2e2e2" align="center">	
+				<th align="left" class="text1">
+				2. Снимаем резервы с товара, который ещё не собран.
+				</th>
+			</table>
+		<h2>4. Внесение трудозатрат фасовщиц:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				1.Открыть список производств.<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAVABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9efj/AOKPGel+L9Kh8J3yxx27QT31kEtzJdW7i5iYoZR1ST7PIfmU7UcDcSEZngD4r33xA1nxNpEeuSWsmn+JJNO0q+jNgyzwNHbyMkkburSmGaS4twYlz+5Cv5kqOS74s/8AJedF/wCwf/Wcf598U79lXRtYk+BnwtuIYdSNiPDOituSVxDtFnb7sqL1Rjhs/uD3+V/4vy3BVs1/15xODqV74aNKFSMLPRzbha99o+zclpvNnpVeT6tGVtbtf1956lo+ow6todncQNI8ckWN7yxSM5VipYtCWjySuTtOMnoDxRRolvdWmhWcd4s6XCo28TOWk/1jYyTNMemP+Wjfh90Ffq2ltTlpq8dblfVvC+l63Os19pun3kygxh5rdHYKCeMkHjOTgccmq6/Dvw+4b/iQ6P8AKM/8eUf/AMTRRWMvj+Qdbf10L+jaPZ6LA0Nja2tnGT5pSCIRqzHAJIHfFFFFdEd2vMTij//Z' /><br><hr color = "black">
+				2.Найти нужное производство.<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9iP2zf2mtL/Yy/ZQ+InxU1hbCa18B6Bdaulreaiunx6lcRxsbazE7BgklxN5cCYVmLzIFViQp+G/ir/wcm+Bfhz/wTu8E/HGy0vwHrmreLvFGs+Gx4ag8azoYv7OS+k89H/s03Z89YNO2JPYwCP8AtqzM7QI3mHj/APg6G+NnjD4X+F/hrb6dfeL4PAOn6D4r8WeIofDupjTbqDVLRdMsfDWoNMk0MzR2evavp05jikYZVZGik8hQv5f+E/8AglB8fU/4Jt6L4iX4X69beGviR4X0/RfDsdh8Q4Wt9U1vWvFWgXFjrN5YvdxQwW97YvY6eIQJds2lW9xcRQFIpkq7NZNn9NHxJ8U6X47/AGbNe1zRNS0/WtE1rw1cX1hqFjcLdWt/by2rPHNFIhKyRuhVlZTtZSpBxg0V+Z3/AAbKfHrxh8b/APgiJ48tPFviDUPEEPgPWNX8L6CbxxJJp+mRaTZTw2ofG5o43uZggcsUQpGuEjRFKYuY/Sz44fsr/C/9pkaafiT8N/APxA/sTzRp58S+H7TVvsHm7PN8nz432b/Kj3bcbtiZztBGj4k+AHgTxl8IIvh5rHgjwjqngGG1trKPwzeaRb3Gjx29tsNvCLR0MIjiMcZRQmF8tNoXaKKKZZk+D/2W/Afwj+EmveC/h74R8J/DnQ/ECXDXFr4d0W30+1NxNCsL3DQwKiPJ5aINxwWWNQSMCiiik2EtD//Z' /><br><hr color = "black">
+				3.Нажать правую кнопку мыши и в контекстном меню выбрать "подчинённые документы".<br><hr color = "black">
+				4.В выпавшем списке выбрать Карточку учёта производительности и открыть её.<br><hr color = "black">
+				5.В карточку добавить фасовщиц. Для этого нажать кнопку справа:<br> <button> ... </button> для добавления одного человека <br> <button> .... </button> для добавления нескольких человек 
+				<br><hr color = "black">
+				6.В колонке  <button>Фасовщик</button> выбрать фасовщиц в соответствии с карточками:<br><hr><text align="left"><i>Для этого нужно левой кнопкой щёлкнуть в соответствующей строке и из выпавшего меню выбрать нужню фамилию.<br>
+				<hr>
+				Для изменения количества в меньшую сторону на вкладке "общая таблица" нужно дважды щёлкнуть левой кнопкой мыши по количесву, которое нужно уменьшить и в выпавшем окне ввести нужное количество.<br><hr>
+				Для изменения количества в большую сторону нужно указать фасовщика, затем перейти на вкладку с фамилией фасовщика, дважды щёлкнуть левой кнопкой мыши по количесву, которое нужно увеличить и в выпавшем окне ввести нужное количество. 
+				</i> 
+				</text><br><hr color = "black">
+				7.При необходимости вносим ОВХ "Обьёмно-Весовые Характеристики" в соответствующие поля карточки. После чего нажимаем кнопку <button>Занести ОВХ</button>.<br><hr color = "black">
+				<font color = "red" size = "5">ВНИМАНИЕ!<br> Нужно отслеживать дату карточки таким образом, чтобы она попадала в период, за который предстоит выплата.</font>
+				</th>
+			</table>
+		<h2>5. Печать заявок на сборку и внесение в них информации по факту готовности:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1">
+				text text text
+				</th>
+			</table>
+		<h2>6. Обработка товара из производства, падающего на склад ГП:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1">
+				text text text
+				</th>
+			</table>
+		<h2>7. Изменение адресов товара при размещении/перемещении товара на складе ГП:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1">
+				text text text
+				</th>
+			</table>
+		<h2>8. Периодическая инвентаризация расходных материалов:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1">
+				text text text
+				</th>
+			</table>
+		<h2>9. Печать реестров на спускаемый товар:</h2>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				1.Нажать <img src="10.jpg"><br><hr color = "black">
+				2.В открывшемся окне нажать <button>Сборки</button><br><hr color = "black">
+				3.Найти <img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9iP2zf2mtL/Yy/ZQ+InxU1hbCa18B6Bdaulreaiunx6lcRxsbazE7BgklxN5cCYVmLzIFViQp+G/ir/wcm+Bfhz/wTu8E/HGy0vwHrmreLvFGs+Gx4ag8azoYv7OS+k89H/s03Z89YNO2JPYwCP8AtqzM7QI3mHj/APg6G+NnjD4X+F/hrb6dfeL4PAOn6D4r8WeIofDupjTbqDVLRdMsfDWoNMk0MzR2evavp05jikYZVZGik8hQv5f+E/8AglB8fU/4Jt6L4iX4X69beGviR4X0/RfDsdh8Q4Wt9U1vWvFWgXFjrN5YvdxQwW97YvY6eIQJds2lW9xcRQFIpkq7NZNn9NHxJ8U6X47/AGbNe1zRNS0/WtE1rw1cX1hqFjcLdWt/by2rPHNFIhKyRuhVlZTtZSpBxg0V+Z3/AAbKfHrxh8b/APgiJ48tPFviDUPEEPgPWNX8L6CbxxJJp+mRaTZTw2ofG5o43uZggcsUQpGuEjRFKYuY/Sz44fsr/C/9pkaafiT8N/APxA/sTzRp58S+H7TVvsHm7PN8nz432b/Kj3bcbtiZztBGj4k+AHgTxl8IIvh5rHgjwjqngGG1trKPwzeaRb3Gjx29tsNvCLR0MIjiMcZRQmF8tNoXaKKKZZk+D/2W/Afwj+EmveC/h74R8J/DnQ/ECXDXFr4d0W30+1NxNCsL3DQwKiPJ5aINxwWWNQSMCiiik2EtD//Z' /> нужную сборку.<br><hr color = "black">
+				4.Напротив сборки поставить галочку <img src = "15.jpg"><br><hr color = "black">
+				5.Когда выбраны все сборки входящие в реестр нажать <button>Печать списка документов</button><br><hr color = "black">
+				6.
+				</th>
+			</table>
+	</body>
+</html>
