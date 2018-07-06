@@ -1,0 +1,543 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Инструкция</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css"></head>
+	<script src = "scrypt.js"></script>
+	<body link="#000000" alink="#e2e2e2">
+
+		<h1  align="center"><a name="abz0">Инструкция по работе МСУ</a></h1><br>
+		<br>
+
+		<ul id="nav">
+<!--
+		<li>
+	        <a href="#" title="Вернуться на главную страницу">Главная</a>
+	    </li>
+	    <li>
+	        <a href="#" title="Информация о компании">О нас</a>
+	        <ul>
+	            <li><a href="#">Продукты</a></li>
+	            <li><a href="#">Команда</a></li>
+	        </ul>
+	    </li>
+	    <li>
+	        <a href="#" title="Что мы можем для вас сделать">Услуги</a>
+	        <ul>
+	            <li><a href="#">Услуга один</a></li>
+	            <li><a href="#">Услуга два</a></li>
+	            <li><a href="#">Услуга три</a></li>
+	            <li><a href="#">Услуга четыре</a></li>
+	        </ul>
+	    </li>
+-->
+	    <li>
+	        <a href="#abz0" title="основное меню">МЕНЮ</a>
+	        <ul>
+	            <li><a href="#abz1">Контроль соответствия данных по остаткам в 1С и фактических</a></li>
+	            <li><a href="#abz2">Печать этикеток на производства</a></li>
+	            <li><a href="#abz3">Инвентаризация склада ГП</a></li>
+	            <li><a href="#abz4">Внесение трудозатрат фасовщиц</a></li>
+	            <li><a href="#abz5">Печать заявок на сборку и внесение в них информации по факту готовности</a></li>
+	            <li><a href="#abz6">Обработка товара из производства, падающего на склад ГП</a></li>
+	            <li><a href="#abz7">Изменение адресов товара при размещении/перемещении товара на складе ГП</a></li>
+	            <li><a href="#abz8">Периодическая инвентаризация расходных материалов</a></li>
+	            <li><a href="#abz9">Печать реестров на спускаемый товар</a></li>
+	            <li><a href="#abz10">Печать заявок на основании счетов от поставщиков и внесение в них информации по факту готовности</a></li>
+	            <li><a href="#abz11">Работа с отгрузками</a></li>
+	            <li><a href="#abz12">Разбивка по перфорации</a></li>
+	        </ul>
+	    </li>
+	    <!--<li>
+	        <a href="#" title="Как с нами связаться">Контакт</a>
+	        <ul>
+	            <li><a href="#">Часы работы</a></li>
+	            <li><a href="#">Местоположение</a></li>
+	        </ul>
+	    </li>-->
+		</ul>
+
+		<ol type="I">
+		
+		<h2><li><a name="abz1">Контроль соответствия данных по остаткам в 1С и фактических:</a></li></h2>
+		<P>
+			<table  border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<a name="planproizvodstv">Сформировать план производств можно следующим образом:</a><br>
+				<ol>
+					<li>На самой верхней панели нажать <button>Отчёты</button> &#8594 <button>РТН &#9658</button> &#8594 <button>Производство  &#9658</button> &#8594 <button>План производства</button></li>
+					<li>В появившемся окне указать период, за который нужно снять отчёт.</li>
+					<li>Переставить значение на <input type="radio" name="Активные" CHECKED>Активные</li>
+					<li>Нажать кнопку <button>Сформировать</button></li>
+				</ol>
+				</th>
+			</table><br>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<h3>Отсутствие возможности собрать товар, который числится по базе, чаще всего обусловлено несколькими причинами:</h3>
+				<h3>Товар есть в наличии, но лежит не на своём месте.</h3>
+				<br><hr>
+				<h3>Товар отсутствует, но не списан с остатков.</h3>
+				<br><hr>
+				<h3>Товар отсутствует, но был ошибочно оприходован.</h3>
+				<br><hr>
+				<h3>Товар есть на складе, но по каким-то причинам не может быть отгружен.</h3>
+				</th>
+			</table>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<h2>Для формирования комплектации нужно:</h2><br>
+				
+				</th>
+			</table>
+			</P>
+		
+		<h2><li><a name="abz2">Печать этикеток на производства:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<ol>
+					<li>Сформировать план производств.</li>
+					<li>Скопировать новые производства из отчёта в файл Excel "Этикетки на производства", на вкладку "план пр."</li>
+					<li>Перейти на вкладку "этикетки" и определить приоритетные производства:<br><i>
+					Как правило, о приоритетных производствах сообщает начальник склада. Если таковых нет то в первую очередь печатать лучше те, на которые имеется в наличии товар и производства на небольшие суммы.
+					</i></li>
+					<li>Открыть производство(<i>это можно следать двумя способами: найти(<img src="5.jpg">) его в общем списке производств <img src="9.jpg"> или дважды щелкнуть по номеру производства в сформированном плане.</i>)<br>
+					<font color = "red" size = "5">ВНИМАНИЕ!<br>Производство имеет смысл печатать только тогда, когда нет товара на вкладке <button>Потребность</button></font></li>
+					<li>Открыть вкладку <button>Шапка</button> и нажать на кнопку <button>Карточка</button>.</li>
+					<li>В открывшемся окне нажать кнопку <button>Записать</button></li>
+					<li>Распечатать карточку учёта.</li>
+					<li>Распечатать карточку обмера.</li>
+					<li>Из производства распечатать производственную шахматку.</li>
+					<li>Открыть форму печати этикеток.</li>
+					<li>Поставить галочку "Разбить на задания".</li>
+					<li>В области "Дополнительные этикетки"<img src = "16.jpg"> указать количество "5" и нажать на кнопку <button>Добавить всем</button></li>
+					<li>При помощи кнопок <img src = "17.jpg"> упорядочить список по типу этикеток.<br><hr>
+					<text>Типы этикеток с которыми мы работаем:<i>
+					<ul>
+						<li>PR37 - Этикетка 40х15 узкая на перфорацию с размером до 60. Печатается на принтер Zebra8</li>
+						<li>PR48 - Этикетка 58х30 на подвесы,ярлыки и перфорацию с размером от 60. Печатается на принтер Godex1</li>
+						<li>PR54 - Этикетка 58х30 на подвесы,ярлыки Bullit. Печатается на принтер Godex1</li>
+						<li>PR55 - Этикетка 58х30 на перфорацию с размером от 60 для Омы. Печатается на принтер Godex1</li>
+						<li>PR57 - Этикетка 40х15 узкая на перфорацию с размером до 60 для Омы. Печатается на принтер Zebra8</li>
+						<li>PR62 - Этикетка 58х59 с припринтом "Госкрепеж" на 400, 1000 и 1500 контейнеры. Печатается на принтер Godex2</li> 
+						<li>PR64 - Этикетка 58х59 с припринтом "Госкрепеж" на пакеты и 280 контейнеры. Печатается на принтер Godex2</li>
+						<li></li>
+						<li><del>PR53 - Этикетка 100х50 с припринтом "Bullit" на крупную фасовку Bullit. Печатается на принтер TSC2</del></li>
+						<li><del>PR2 - Этикетка 100х50 с припринтом "Госкрепеж" на пакеты и на 400 контейнеры. Печатается на принтер TSC2</del></li>
+						<li><del>PR4 - Этикетка 100х50 с припринтом "Госкрепеж" на 280 контейнеры. Печатается на принтер TSC2</del></li>
+						<li><del>PR5 - Этикетка 100х50 с припринтом "Госкрепеж" на коробки без окна Standart. Печатается на принтер TSC2</del></li>
+					</ul>
+						</i></text>
+					<li>Первым делом выбрать все этикетки и проставить на против их галочки <img src = "15.jpg">.</li>
+					<li>Нажать кнопку <button>Печать этикеток</button><br>
+					<i>Если в появившемся окне нажать <button>Да</button>этикетки будут отправлены на печать<br></i>
+					<i>Если в появившемся окне нажать <button>Нет</button>откроется предварительный просмотр этикеток</i></li>
+					<li>После того как печать прекратится нужно нажать <button>ХХ Выд.</button></li>
+					<li>После того как Распечатали все этикетки( или если таковых в данном производстве не было) поочерёдно распечатать этикетки на остальные принтеры.<br>
+					<i>напротив позиции поставить галочку <img src = "15.jpg"> и нажать на кнопку <button>Печать этикеток</button></i></li>
+					<li>После того как печать прекратится нужно нажать <button>ХХ Выд.</button></li>
+					<li>По окончании печати этикеток нужно сложить "Карточку учёта производительности", "Карточку обмера", "Производственную шахматку" и этикетки в файл или в коробку, если этикеток много.</li>
+					<li>В файле Excel "Этикетки на производства", на вкладке "этикетки" поставить "+" в соответствующей ячейке напротив напечатанного производства и указать дату окончания печати.</li>
+				</ol>
+ 
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz3">Инвентаризация склада ГП:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1"><br><hr color = "red">
+				<font color = "red" size = "5">ВНИМАНИЕ!<br>Перед инвентаризацией весть товар на ГП должен быть разнесён, а все распечатанные сборки должны быть собраны и проведены.</font><br><hr color = "red">
+				<ol>
+					<li>Открыть "Складские документы" <img src="8.jpg"></li>
+					<li>Нажать кнопку "Новая строка"<img src="6.jpg"></li>
+					<li>В открывшемся окне выбрать "Инвентаризация"</li>
+					<li>Выбрать склад "В пути" при помощи кнопки <button>...</button></li>
+					<li>Перейти на вкладку <button>Табличная часть</button></li>
+					<li>Нажать кнопку <button>Заполнить</button> и выбрать<button>Заполнить по остаткам без собраных резервов</button></li>
+					<li>Нажать кнопку <button>Нулим</button></li>
+					<li>Нажать кнопку <button>Записать</button></li>
+					<li>Нажать кнопку <button>Вирт.списание</button></li>
+					<li>Выбрать склад получатель "Склад ГП" при помощи кнопки <button>...</button></li>
+					<li>Нажать кнопку <button>ОК</button></li>
+				</ol>
+				</th>
+			</table>
+			<br><table border="1" bgcolor="#e2e2e2" align="center" >
+				<th align="left" class="text1">
+				<h2>Для снятия резервов с заявок, котые ещё не отданы на сборку, нужно:</h2>
+				<ol>
+					<li>В инвентаризации выбрать вкладку <button>Шапка</button></li>
+					<li>Выбрать склад "ГП" при помощи кнопки <button>...</button></li>
+					<li>Перейти на вкладку <button>Табличная часть</button></li>
+					<li><a name="p.4">Нажать кнопку <button>Заполнить</button> и выбрать<button>Заполнить по остаткам без собраных резервов</button><br>
+					<li>Нажать<button>Да</button></li>
+					<i>В нижней части экрана появится небольшое окно с перечислением учтённых заявок</i></li></a>
+					<li>Нажать кнопку "СчетаПоставщиковСзакладками"<img src="10.jpg"></li>
+					<li>В открывшемся окне нажать <button>Заявки</button> <br><i>в левом верхнем углу окна должна появиться надпись<img src="4.jpg"></i></li>
+					<li>Найти заявки из пункта <a href="#p.4">4.</a><img src="5.jpg">, поочерёдно открыть их и проверить стоит ли галочка в <button><input type="checkbox" checked>Собрана складом</button> на вкладке <button>Шапка</button></li>
+					<li>Если не стоит галочка в <button><input type="checkbox" >Собрана складом</button> нажать кнопку <button>Действия</button>, выбрать <button>Ввести на основании</button></li>
+					<li>В открывшемся окне выбрать <button>Снятие резерва</button></li>
+					<li>В открывшемся окне нажать <button>Провести</button></li>
+				</ol>
+				</th>
+			</table>
+			<br><table border="1" bgcolor="#e2e2e2" align="center">	
+				<th align="left" class="text1">
+				<h2>Для печати инвентаризаций по стеллажам нужно:</h2>
+				<ol>
+					<li>В инвентаризации выбрать вкладку <button>Табличная часть</button></li>
+					<li>Нажать кнопку <button>Заполнить</button> и выбрать<button>Заполнить по складским местам</button></li>
+					<li>В открывшемся окне ввести номер стеллажа  в поле <button>Стеллаж:&#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160<input></button> и нажать <button>Выполнить</button> </li>
+					<li>Нажать кнопку <button>Сорт. по...</button> и выбрать<button>Месту</button></li>
+					<li>Нажать <button> &#9660 </button> справа от кнопки <button> Записать </button> и выбрать <button> Печатная форма сверки наличия</button></li>
+					<li>В предпросмотре нажать <img src="18.jpg">. В открывшемся окне нажать <button>ОК</button></li>
+				</ol>
+				</th>
+			</table>
+			<br><table border="1" bgcolor="#e2e2e2" align="center">	
+				<th align="left" class="text1">
+				<h2>Для внесения данных по пересчёту нужно:</h2>
+				<ol>
+					<li>В инвентаризации нажать кнопку <button>Заполнить</button> и выбрать<button>Заполнить по остаткам без собраных резервов</button></li>
+					<li>Нажать кнопку <button>Нулим</button></li>
+					<li>Нажать кнопку <button>Сорт. по...</button> и выбрать<button>Месту</button></li>
+					<li>Вносить количество в колонку <button>Кол.(факт.)</button> в соответствии со сданными бланками инвентаризаций</li>
+					<li>Для добавления в инвентаризацию позиций, дописаных от руки, нужно нажать кнопку <button>Подбор</button>.<hr>
+						В открывшемся окне выбрать артикул и дважды нажать левой кнокой мыши по нужной карточке.<hr>
+						В открывшемся окне ввести количество и нажать <button> ОК</button>.<hr>
+						После того как все позиции из списка выбраны нажать<button> ОК</button></li>
+					<li>После внесения в общую инвентаризацию данных нужно выявить позиции для повторного персчёта. К таким относятся позиции с большими расхождениями.</li>
+					<li>Отдать кладовщикам список сомнительных позиций для повторного пересчёта</li>
+					<li>После пересчёта внести соответствующие корректировки в инвентаризацию.</li>
+					<li>В инвентаризации нажать кнопку <button>Записать</button></li>
+				</ol>
+				</th>
+			</table>
+			<br><table border="1" bgcolor="#e2e2e2" align="center">	
+				<th align="left" class="text1">
+				<h2>Для списания недостающего товара нужно:</h2>
+				<ol>
+					<li>В инвентаризации нажать кнопку <button>Действия</button> и выбрать <button>Ввести на основании</button></li>
+					<li>В открывшемся окне выбрать <button>Списание ТМЦ</button></li>
+					<li>В списании открыть вкладку <button>Шапка</button> и ввести коментарий.</li>
+					<li>Нажать кнопку <button>Провести</button></li>
+						<i>
+					<li>При возникновении проблем с проведением списания откроется окно об ошибке, в котором будет артикул проблемной позиции.</li>
+					<li>На самой верхней панели нажать <button>Отчёты</button> и выбрать <button>Ведомость по остаткам</button></li>
+					<li>В открывшемся окне указать период с предыдущей инвентаризации по текущую дату</li>
+					<li>Поставить галочку напротив <button><input type="checkbox" checked>Документы движения</button></li>
+					<li>Выбрать фирму "МЕТИЗЫ 2015" при помощи кнопки <button>...</button></li>
+					<li>Нажать <button>Сформировать</button></li>
+					<li>В полученом отчёте обратить внимание на резервы. Ещё раз пройтись по счетам и проверить наличие галочки <button><input type="checkbox" checked>Собрана складом</button></li>
+					<li>Конечный остаток по позиции должен быть больше или равен резерву. В противном случае списание не будет проведено.</li>
+						</i>
+				</ol>
+			</th>
+			</table>
+			<br><table border="1" bgcolor="#e2e2e2" align="center">	
+				<th align="left" class="text1">
+				<h2>Для оприходования лишнего товара нужно:</h2>
+				<ol>
+					<li>В инвентаризации нажать кнопку <button>Действия</button> и выбрать <button>Ввести на основании</button></li>
+					<li>В открывшемся окне выбрать <button>Оприходование ТМЦ</button></li>
+					<li>В списании открыть вкладку <button>Шапка</button> и ввести коментарий.</li> 
+					<li>Нажать кнопку <button>Провести</button></li>
+				</ol>
+			</th>
+			</table>
+			</P>
+		
+		<h2><li><a name="abz4">Внесение трудозатрат фасовщиц:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				<ol>
+					<li>Открыть список производств.<img src="9.jpg"></li>
+					<li>Найти нужное производство.<img src="5.jpg"></li>
+					<li>Нажать правую кнопку мыши и в контекстном меню выбрать "подчинённые документы".</li>
+					<li>В выпавшем списке выбрать Карточку учёта производительности и открыть её.</li>
+					<li>В карточку добавить фасовщиц. Для этого нажать кнопку справа:<br> <button> ... </button> для добавления одного человека <br> <button> .... </button> для добавления нескольких человек 
+					</li>
+					<li>В колонке  <button>Фасовщик</button> выбрать фасовщиц в соответствии с карточками:<br><hr><text align="left"><i>Для этого нужно левой кнопкой щёлкнуть в соответствующей строке и из выпавшего меню выбрать нужню фамилию.<br>
+					<hr>
+					Для изменения количества в меньшую сторону на вкладке "общая таблица" дважды щёлкнуть левой кнопкой мыши по количесву, которое нужно уменьшить и в выпавшем окне ввести нужное количество.<br><hr>
+					Для изменения количества в большую сторону указать фасовщика, затем перейти на вкладку с фамилией фасовщика, дважды щёлкнуть левой кнопкой мыши по количесву, которое нужно увеличить и в выпавшем окне ввести количество. 
+					</i> 
+					</text></li>
+					<li>При необходимости внести ОВХ "Обьёмно-Весовые Характеристики" в соответствующие поля карточки. После чего нажать кнопку <button>Занести ОВХ</button>.<br><hr color = "red">
+					<font color = "red" size = "5">ВНИМАНИЕ!<br> Нужно отслеживать дату карточки таким образом, чтобы она попадала в период, за который предстоит выплата.</font><hr color = "red"></li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz5">Печать заявок на сборку и внесение в них информации по факту готовности:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1" align="left">
+				<h2>Чтобы распечатать заявку на сборку нужно:</h2><br>
+				<ol>
+					<li>Нажать кнопку "СчетаПоставщиковСзакладками"<img src="10.jpg"></li>
+					<li>В открывшемся окне нажать <button>Заявки</button> <br><i>в левом верхнем углу окна должна появиться надпись<img src="4.jpg"></i></li>
+					<li>Нажать на кнопку <img src="20.jpg"> и указать период с прошлой недели по конец следующего месяца.</li>
+					<li>Нажать <button>Фильтровать</button></li>
+					<li>В "Фильтре складов"(справа) выбрать склад.</li>
+					<li>Если есть заявки без галочек поставить напртив галочку<img src="15.jpg"> и нажать <button>На сборку</button><br><text><i><img src="14.jpg"> собрана и готова к отгрузке,<img src="15.jpg"> находится в сборке</i></text></li>
+					<li>В открывшемся окне нажать <button>ОК</button></li>
+					<li>После обновлеия списка возле заявки должна появиться галочка<img src="15.jpg">. По двойному нажатию на которую можно попасть в заявку.</li>
+					<li>Из заявки нужно распечатать этикетки на коробки: нажать <button> &#9660 </button> справа от кнопки <button> Закрыть </button> и выбрать <button> Этикетки на коробки </button>. 
+					<li>В открывшемся окне нажать <button> По одной </button>.</li>
+					<li>В предпросмотре нажать <img src="18.jpg">.</li>
+					<li>В открывшемся окне нажать <button>ОК</button></li>
+					<li>Отдать сборщику две копии заявки с этикетками на коробки.</li>
+				</ol>
+				</th>
+			</table><br><br>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1" align="left">
+				<h2>Чтобы внести данные по сборке и поставить её в статус "собрана" нужно:</h2><br>
+				<ol>
+					<li>Нажать кнопку "СчетаПоставщиковСзакладками"<img src="10.jpg"></li>
+					<li>В открывшемся окне нажать <button>Сборки</button> <br><i>в левом верхнем углу окна должна появиться надпись<img src="2.jpg"></i></li>
+					<li>Найти нужную заявку <img src="5.jpg">. Номер сборки находится в левом верхнем углу распечатанного документа</li>
+					<li>Открыть заявку.</li>
+					<li>Указать сборщика в строке "Исполнитель".<br><i>Нажать<button>...</button> и в строке поиска ввести фамилию сборщика</i></li>
+					<li>Указать количество мест и палет.</li>
+					<li>Если в бумажной сборке проставлены номера коробок,поставить галочку в <button><input type="checkbox" checked>Все коробки пронумерованы при сборке</button></li>
+					<li>Если сборщик не смог что-то найти, меняем количество в колонке "Факт".</li>
+					<li>Нажимаем кнопку <button>Сохранить</button></li>
+					<li>Нажимаем кнопку<button>АКТ</button></li>
+					<li>В акте в графе "Кометарий" указываем причину по которой не смогли собрать товар.</li>
+					<li>Нажимаем<button>ОК</button></li>
+					<li>Меняем статус сборки на "Собрана" и нажимаем <button>ОК</button></li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz6">Обработка товара из производства, падающего на склад ГП:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1" align="left">
+				<h2>Чтобы внести данные по проверке ГП из производства нужно:</h2><br>
+				<ol>
+					<li>Открыть список производств.<img src="9.jpg"></li>
+					<li>Найти нужное производство.<img src="5.jpg"></li>
+					<li>Нажать правую кнопку мыши и в контекстном меню выбрать "подчинённые документы".</li>
+					<li>В выпавшем списке выбрать Перемещение со склада "ГП" на склад "В пути" и открыть его.</li>
+					<li>Открыть вкладку <button>Шапка</button></li>
+					<li>В поле "Разнёс по местам" нажать <button>...</button>.</li>
+					<li>В открывшемся списке в поле поиска ввести фамилию проверяющего и нажать кнопку <button>Найти</button>, за тем двойным щелчком выбрать проверяющего</li>
+					<li>Нажать <button>Записать</button> и закрыть перемещение.</li>
+				</ol>
+				</th>
+			</table><br>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1" align="left">
+				<h2>Чтобы распечатать ГП из производства для разнесения нужно:</h2><br>
+				<ol>
+					<li>Открыть список производств.<img src="9.jpg"></li>
+					<li>Найти нужное производство.<img src="5.jpg"></li>
+					<li>Нажать правую кнопку мыши и в контекстном меню выбрать "подчинённые документы".<br><hr color = "red">
+					<font color = "red" size = "5">ВНИМАНИЕ!<br> Без перемещения со склада "ГП"" на склад "В пути" не имеет смысла распечатывать бланк разнесения так как велика вероятность расхождекний.</font><br><hr color = "red"></li>
+					<li>Закрыть список подчинённых документов.</li>
+					<li>Открыть производство</li>
+					<li>Нажать <button> &#9660 </button> справа от кнопки <button> Закрыть </button> и выбрать <button> 2.2 Раскладка по клиентам </button>.</li>
+				</ol>
+				</th>
+			</table><br>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th class="text1" align="left">
+				<h2>Чтобы внести данные по разнесению ГП из производства нужно:</h2><br>
+				<ol>
+					<li>Открыть список производств.<img src="9.jpg"></li>
+					<li>Найти нужное производство.<img src="5.jpg"></li>
+					<li>Нажать правую кнопку мыши и в контекстном меню выбрать "подчинённые документы".</li>
+					<li>В выпавшем списке выбрать Перемещение со склада "ГП" на склад "В пути" и нажать правую кнопку мыши.</li>
+					<li>В выпавшем списке выбрать "Вввести на основании"</li>
+					<li>В открывшемся окне выбрать "Перемещение ТМЦ"</li>
+					<li>Открыть вкладку <button>Табличная часть</button> и проверить совпадает ли она с данными на бумажном носителе<br><hr>
+					<i>Если есть расхождения, то сообщить о них менеджеру и дождаться, когда расхождения будут устранены</i>
+					</li>
+					<li>Открыть вкладку <button>Шапка</button></li>
+					<li>В открывшемся списке в поле поиска ввести фамилию разносившего и нажать кнопку <button>Найти</button>, за тем двойным щелчком выбрать разносившего</li>
+					<li>Нажать <button>OK</button> и закрыть перемещение.</li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz7">Изменение адресов товара при размещении/перемещении товара на складе ГП:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				<ol>
+					<li>Открыть "Складские документы" <img src="8.jpg"></li>
+					<li>Нажать кнопку "Новая строка"<img src="6.jpg"></li>
+					<li>В открывшемся окне выбрать "Смена складских мест"</li>
+					<li>Выбрать склад при помощи кнопки <button>...</button></li>
+					<li>В появившемся окне нажать <button>Да</button></li>
+					<li>Проверить наличие запасов по старому адресу, если таковой имеется.</li>
+					<li>В три последних колонки документа внести новый адрес( стеллаж, ярус и место соответственно)</li>
+					<li>Для перезаполнения мест нужно нажать <button>Применить изменения</button></li>
+					<li>Перед закрытием нажать <button>Записать</button></li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz8">Периодическая инвентаризация расходных материалов:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				<ol>
+					<li>Открыть файл Excel "Расходники".</li>
+					<li>Перейти на вкладку "Инвентаризации" и распечатать список товара.</li>
+					<li>Пересчитать товар.</li>
+					<li>Внести данные в файл.</li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz9">Печать реестров на спускаемый товар:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				<ol>
+					<li>Нажать <img src="10.jpg"></li>
+					<li>В открывшемся окне нажать <button>Сборки</button></li>
+					<li>Найти <img src="5.jpg"> нужную сборку.</li>
+					<li>Напротив сборки поставить галочку <img src = "15.jpg"></li>
+					<li>Когда выбраны все сборки входящие в реестр нажать <button>Печать списка документов</button></li>
+					<li>Дважды нажать <img src = "18.jpg"></li>
+					<li>Выделить табличную часть из реестра (без шапки) и нажать <button>CTRL</button>+<button>C</button></li>
+					<li>В экселевском файле "Этикетки на производства" открыть вкладку "Реестр"</li>
+					<li>Выделить первую пустую строку в таблице и нажать <button>CTRL</button>+<button>V</button>.</li>
+					<li>В соответствующей ячейке поставить текущую дату (можно сочетанием клавиш <button>CTRL</button>+<button>SHIFT</button>+<button>;</button>).</li>
+				</ol>
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz10">Печать заявок на основании счетов от поставщиков и внесение в них информации по факту готовности:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz11">Работа с отгрузками:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				
+				</th>
+			</table></P>
+		
+		<h2><li><a name="abz12">Разбивка по перфорации:</a></li></h2>
+		<P>
+			<table border="1" bgcolor="#e2e2e2" align="center">
+				<th align="left" class="text1">
+				1.В общем журнале документов <img src = "21.jpg"> выбрать
+				</th>
+			</table></P>
+		</ol>
+	</body>
+</html>
+<!--
+	Картинки:
+2.jpg надпись "Заявки на сборку"
+	==============================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,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' />
+	==================================================================================================================================================================================================================================================
+
+4.jpg надпись "Заявки на склад"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,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' />
+	==================================================================================================================================================================================================================================================
+
+5.jpg бинокль "поиск"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAXABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9iP2zf2mtL/Yy/ZQ+InxU1hbCa18B6Bdaulreaiunx6lcRxsbazE7BgklxN5cCYVmLzIFViQp+G/ir/wcm+Bfhz/wTu8E/HGy0vwHrmreLvFGs+Gx4ag8azoYv7OS+k89H/s03Z89YNO2JPYwCP8AtqzM7QI3mHj/APg6G+NnjD4X+F/hrb6dfeL4PAOn6D4r8WeIofDupjTbqDVLRdMsfDWoNMk0MzR2evavp05jikYZVZGik8hQv5f+E/8AglB8fU/4Jt6L4iX4X69beGviR4X0/RfDsdh8Q4Wt9U1vWvFWgXFjrN5YvdxQwW97YvY6eIQJds2lW9xcRQFIpkq7NZNn9NHxJ8U6X47/AGbNe1zRNS0/WtE1rw1cX1hqFjcLdWt/by2rPHNFIhKyRuhVlZTtZSpBxg0V+Z3/AAbKfHrxh8b/APgiJ48tPFviDUPEEPgPWNX8L6CbxxJJp+mRaTZTw2ofG5o43uZggcsUQpGuEjRFKYuY/Sz44fsr/C/9pkaafiT8N/APxA/sTzRp58S+H7TVvsHm7PN8nz432b/Kj3bcbtiZztBGj4k+AHgTxl8IIvh5rHgjwjqngGG1trKPwzeaRb3Gjx29tsNvCLR0MIjiMcZRQmF8tNoXaKKKZZk+D/2W/Afwj+EmveC/h74R8J/DnQ/ECXDXFr4d0W30+1NxNCsL3DQwKiPJ5aINxwWWNQSMCiiik2EtD//Z' />
+	==================================================================================================================================================================================================================================================
+
+6.jpg кнопка "добавить новый"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAYABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9lPiV8S/Enh681q20Hw6NbvNN0qa+s7OKdPtOrygR7EgEjxReYv71WjkkjXMtrmaMTEr8BeNf+C8nxx+HWj61qmsfsX+OrLRPD/8Aa815q9w3iW1sUtbC389bxnm8OJ5cF18yQmQK0bIzXK2sYEh7/wD4KKeGbj4nftqLoHjq6+MCfCVPBWmQRWfhz4Zv4z0W9lub7VJ9RaeBvDusW9xdxS6X4d8uKc25hjmmljfJeObwX4lfs/6f8Z/Dlvo2nyfHKTxP481XTrXVpv8AhQ0Fj5M3iS+g03xjcf2nN4F0/wCzj+yWdv7Sa4iluPL/AHsSCFEl6sio08PiKlXMJKrGT92Lco8i1vbl3e299uzaLqTk3aOnfzP14Dbh/wDWooJzRWMpWdkaR21DGfy6+x/z9KBweMetFFAw/wA80UUUAf/Z' />
+	==================================================================================================================================================================================================================================================
+
+7.jpg наменклатура "яблоко"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAWABoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9CP8AgsR/wUg8Yf8ABNHwT4O8X6D4V07xd4avLi5h8SQNGzXthbhrZUvYGEyK6oZHVoipLmVG8yJYpC3xzq3/AAdZaLYabpF9b2Wi3+nahZwXt7NBpkjPoKSXBtyt3EbwSh0cHcsKSnaUYblkjLfRn/Bd3W7jwdq3wD8RLoNnr+n+HfFNxeapFeNcJFZWrQpA14XtgZ4pLdpkmSWKOV4JYopgg8vzE+W/+Cj/AO0X+y/4ns9A8c+FNS8Nw+M9A0Sz03Q9X+xx2q6GkdvcXemx2/nr5tnPE08+028R8qTCT/Z5o7S4tvzfizjjFZBn2Fw1PB1a0K0H7y1ppqW0lbRvpJPys9bfacO8Cf2tXp4uFaSUlKMk37kbLST7WbTv1V0foh/wTS/bwm/b18D6t4khl8O32iRw2k+m3ekRSxrOspnDhxI7lXVodpUhWRg6sMggfTJ2k9v++v8A69fiZ/wZuX99qulftHTLDeW/hmW/0EaZGIWitFcJqCyeWmSvmmMW5kwzOR5Zdm4J/bYTf7X5MD/Wv1rM6ajWV4cl4xfL2vFP9T5epBQnKEZcyTauutna/wAzi/i9+zv4R+Ojad/wlmk/2p/ZRlW1xdzQ+V5mzf8A6tlzkovXOMcdTXy34s/4N1/2NfHHiCTU734K6fHc3RQlLPXtVsoFIUKNsUN0kafdGdqjJyTySSUVz08RVgkoyel7eXoKnVnyShd2aWl9D6S/Z4/ZS+Hf7KOgXOl/DnwrYeE9LulQtZ2bOIAEaRxtRmKpzLIx2gZLnOetehPPscr6HFFFTUqTrTc6rbemr9DKp7ukT//Z' />
+	==================================================================================================================================================================================================================================================
+
+8.jpg складские документы "стрелочка"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAWABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9P/2sP2vfE37NnxbmXSdL0/xRay6NodtY6Jf6h/ZdrLqGqeJrLR455bxLe4ljjjF4HbbFJkRkBM8jwj9q/wD4KT/HLSPhz8b9Ds/Anhr4V6/8KfCdh4ufxnpepal4z0+03XayC3uLJ9Gt5ntJ7a3u4pLyBZY4cylWza3b2nsn7U/7Lum/tl/tJax8PdV1rXvDtvqXgPT9Qh1LRbprW+s7mx8Q21/bPHKuHTE9tFuMbJJt3bJI32uvx/8AtmfATxJL8KvjN8E9O/Zb+N3izw7o+iX3hr4W37xaVqNpaedpwjMv2lb9CNNe+S1uoLGSGU2kljbyr5bQ2llpvk8RYjNMDjMNisFTVWjZKpTS99uTVpp3s1H7UXa6u1K6UZdNFQlFqTs+j/Q+uv8Agjv+2rrv7dP7MOteJvFVvrGmeK/D3im78Na1pGq6eLG80K9torczWcieXHko8jcsob5sOqMGjUrxb/g240640X4DftGWd5b3FneWvx+8UQzwTI0ckMiw2CsjqRlWBBBBGQfSivqsypr61NQ0V+m2y2MYyfKmfevxX/ZU8C/HqwktPHXgfwT4ztJo0hlh13R7fUo5ER/MRSs0bDar/MAQQG5615r/AMOjP2Zx/wA24/s/+v8AyIGlYB/8B6KK8+Um1qVHc9O+DX7MXgv9nPwvNofw98G+DfAeiz3TXsmn+HtJg0y1mnZURpWjhRVMhWNFLEE4VR/CMFFFEqkm7jR//9k=' />
+	==================================================================================================================================================================================================================================================
+
+9.jpg производства "ключик"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAVABcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9efj/AOKPGel+L9Kh8J3yxx27QT31kEtzJdW7i5iYoZR1ST7PIfmU7UcDcSEZngD4r33xA1nxNpEeuSWsmn+JJNO0q+jNgyzwNHbyMkkburSmGaS4twYlz+5Cv5kqOS74s/8AJedF/wCwf/Wcf598U79lXRtYk+BnwtuIYdSNiPDOituSVxDtFnb7sqL1Rjhs/uD3+V/4vy3BVs1/15xODqV74aNKFSMLPRzbha99o+zclpvNnpVeT6tGVtbtf1956lo+ow6todncQNI8ckWN7yxSM5VipYtCWjySuTtOMnoDxRRolvdWmhWcd4s6XCo28TOWk/1jYyTNMemP+Wjfh90Ffq2ltTlpq8dblfVvC+l63Os19pun3kygxh5rdHYKCeMkHjOTgccmq6/Dvw+4b/iQ6P8AKM/8eUf/AMTRRWMvj+Qdbf10L+jaPZ6LA0Nja2tnGT5pSCIRqzHAJIHfFFFFdEd2vMTij//Z' />
+	==================================================================================================================================================================================================================================================
+
+10.jpg логистика "машинка"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAVABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7c/4Kl/t4eN/gD+1n8MPhf4A8L+JPFfiHx9ZfaUtdO8R2+hQQQLO8MtxNcz29ysaxNJAzAW7lozIxeIQ4l+WrD/goJ+1V4UsPjZrF98JviNfWngfV41WBvixpSFFMEUJ+ygaJm5iRYvtLsDCohnRyu93ml95/4K2/tf8AgH9jT9vz4Q3Xjr4Y6b8R9Q+Ifh640Dwn/wAUnZeINQ07U1vYo8QrdXVqsKTLehGKSgvtVThea4n49f8ABSP4WfAH4U+JvFXjT9j3WtJ8IyOh16e9+EfhvyLpZiLRBPt15y5ZWtYSWRsiMjAVlCY1bNttP3dv669h/XMTT9pSpv3ZJX929+uj/O1ux9w/8E2v2hW/aq/ZN8P/ABA36k1v4oAvbYXx/wBIWFo4ym5d8gQkHcUDuFLEBmxuJXOf8EftWt/En7AvgfWLPTdN0Ww8QWcWtWenafALe106C7hiuYreKMcRrGkqoEXKrtwCQAaK6ox51e9i1dpH02z7ZFXnlthOfQUrZRgPXHIz1Iz60UUR1S8zQbLJ5WOP88f40UUVMjSMVY//2Q==' />
+	==================================================================================================================================================================================================================================================
+
+11.jpg выделить всё "две галки есть"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9sviv4quvBvguTULNv31uCVUu6oxMkK87SCcBjjnr7Zr4d/4KKf8ABSn4zfAHw78K9P8AhbYfD+58X/FP4kaR4AtG8U/2k+m27agtwscjm3uVlXbKkWWAfCF8IxxX2h+0Lz8Lr3/d/wDa9vX5c/8ABVnxNb+DPEf7JusXkeoTWmk/tF+D72eOxsJ7+6dI2unYRW8CPNNIQuFjiRpHOFVWYgHQ1kaPgb/gpD+2l8Svjrp/w10X4hfsJ3njbVfFXiDwTa6d9g+IMfm6xoNvDc6tbea8IiXyIp4m8wuI5N+I2cgge4/8Ex/+CoXxC/bR/Ye8E/EvxTp/hqw17xL9v+0waUL2K0TyNQubZdiyXMjDKQoTlz8xOODgc3+wp8I/gb+xz+0x8Y/ixqlr8e/iF4s+Jnj3VfGmhyah+zh4xiTwGt+0xnh08tpUskc8yT+Vc3Ebx/aIre2QxqIvm8T/AOCBZz/wSX+E/wD3F/8A0833+f8AIqYkRkz9D/2dPEd54m/ay+KtxeTyzMfD3hYorytIsIeK/lKJuJ2rvdzjpliepoqj+yp/ydF8Uv8AsXPCf/pLd0VRsep/tC/8kuvf93/2vb1+ZP8AwUtOPiZ+x3/2ct4K/wDRtzX6QfH7QfiV4qNtY+DdF8B6lozQt9sk17VL23leQujBUS3gbCr5atuLktuIKjblvmX9qT/gmT4k/bR8AWfhX4mfC34K+JNBsNQj1W3tf+Et8SWfl3KRyxLJvt1jc4SaQYLEfNyMgEBEjk/+Ccf7Of7THxL/AG6fiT8QPiH8Sfif4V+Gvwy+N/jv+wfCeuT6m8fjrSb+3jt7ILFM8cSaXZbYprN0+0xO8lyES3KeZL4T/wAEC+P+CS/wo/7jGT/3Gb7/AD/njqP+IZD4Z4/5N2+C34/EXxp/8cr6S+Af7BHjz9mD4S6V4F8C/Df4K6H4W0HzvsNl/wAJR4hufJ82aSeT95MjyHdJI7fMxxuwMAAVMSOU9F/ZV/5Oi+KX/YueE/8A0lu6K1v2Yfhb4r8D/Gbx7q3jGTwXbaprml6LFHpmg6hPctaQW322KOWRZ4kkRZOQpO4MYZeflNFUbH//2Q==' />
+	==================================================================================================================================================================================================================================================
+
+12.jpg выделить всё "двух галок нет"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAhACYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9rPiP8WLX4bXMKXVu8i3GQnlQ+YTtjjZt2ZFHJkHboD7V8p/tGf8ABbrwt8AP2irX4W6f8H/jz8UvGF14dXxU1p4A8HprbW9g1zJbebIi3qyqFlQAtsKDzYxuywFe3ftYf8f2k/78pH/fq2r41/Y9OP8Ag5Jvvf8AZqk4/wC5oiq3saSN74pf8HFmi/A7wFfeKPGn7Kv7Zvg/wzpnli91fW/hcNPsLTzJFij8yabUFRN0joi7iMs6gckCvs7Rv2ktK17VrWxitbhZrydIUZ7YbQWIAyROeMmvmr/g6IG3/ghX8cP+4Dg5/wCpg02ut+HfHxB0L73/ACELfHP/AE1X/P8A9fNKJMT1/wDY/wDihq/xl+Amn+JNckhk1C/1LVUbyoxHHHHFqV1FFGoH8KRJGoJJY7csWbJJXPf8E6v+TSdD/wCwnrX/AKd7yiqNix+1h/x/aT/vS/8Aoq2r4G+Ev7PfgH9pP/g4gm0L4i+B/CHj7RLX9nRr+HT/ABHo1vqtrDcL4mVFmWKdHVZAkkihgMgSMM4JB+0f2ivjHp+v+MptNHhT4tXH9izvCbvTfA17eWty2yJW8uTCBlDRkB1yrdVJXBPxP8c/2aviRrP7aVt8bvg78Svjh8G/Ey+CV8DXQ/4UEfEP2qz+3vev/wAfU/lrukMPSPcPJ4fDFaGZyOu/4ONv+Ce/wD+B3/BGT4yeKPBXwP8AhD4Q8TaX/Yn2PV9F8G6dp9/aeZrmnxSeXPDCrpujd0O0jKuyngkH6M+HQx4/0H/sIW//AKMWvhH9qL9lP9qD9tD4Fa58NPiX+1J8cPEngnxJ9n/tLTf+GWrSz+0+RcRXMX723njlXbNDG3yuM7cHIJB+1vD3xJ0/QfEFjf8A/CG/HCY2dxHPs/4V1eLv2MGxnccZx6H6VKuSkerf8E6v+TSdD/7Ces/+na8oq1+wFoOoeG/2V9BtdU03UdJvPt2qzNa39rJa3EaSandyRlopAHXcjKw3AHDA0VRseyP/AK7/AICP5miiignqFNk+6v8AvD+tFFA5bEh+4v0X/wBBWiiigZ//2Q==' />
+	==================================================================================================================================================================================================================================================
+
+13.jpg обратить выделение "диагональные галки"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAbAB0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDvP+CtH/BQz4yfAn9uTx5oeg/G/WPhP8Nfhz8MYPG1/Honw40PxXf3k8viePRUjjjvmt8Z+2W7MxuAFWBsKzMTVjXvEP7UbfF74peBfDv7deoa1r3wg8V+AfDOtzy/AnwvBpt3/wAJZqFpaW81pNHcSvL9nS5aSRHjjy0XlhsMZFyf23/2d9P/AGvf+C2PxO+FuseDfih420Txt8BVtr+18A6hotjrNmlv42gvknWTV7iG1Efm2sSMAXkImG1MbnT6e+MV437Jv7CXgT4W/D/9kj43eAfAfhf4k+CbjTLW88Q+F7+ON28caXetAJG8QXE7SXFw7RoXOxZJ03vFEGdC5Tbubw/4Ji/trf8ASQa364P/ABYLw9x/5G/zmpP+CAf7VHjr9tf/AIJ4eFPHXxO1i38TeKtS+2fab3+zLSy8zZqd/Av7u3ijjGI4Y14UZ25PJJP0Yf2yPiJn/k1H4/D/ALjHgjn/AMuGvjH/AINW/wDlEr4F/wC3/wD9POp1UQTZgaX+0F4C/Zt/4OX/ABJrvxG8ceD/AADol18BLmwg1DxHrNvpdrNcN4q8xYFlndFMjJHIwQEsQjnGFOPff+Cgn/BTT9m/xp8B9Bs9H/aC+B+rXkPxK8BX7wWXjrS7iRLe28YaNcXExVJyRHFBFLLI+MJHG7MQqkjwH4tab4f+Pnihdc8deA/hb411pIfsy3+veA9G1K6WLe77BJNaswXfI7Yzjc7HqTXL/wDDP/wr/wCiK/AX/wANf4f/APkOhoOU4r9kX4d/BTxh8evifr3xi/as+CPhTwVpX7T+q/G3wR4f0v4haDJeaxdR3EUmn6hcXa6hNEtnLCZo3szaxXQKhjOgwh+gf+DVhV/4dLeB8g/8v/b/AKjGp+4/zj6DzP8A4Z++Ff8A0RT4C/8AhrvD3/yHXqfwx+N+u/AfwlbaB4Hh8N+DdCtQ3k6dofhvTtOtIt0jyNtihgVBl3djgcs7HqTQkOx//9k=' />
+	==================================================================================================================================================================================================================================================
+
+14.jpg  "зелёная галочка"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9lNT/AGk9P8GftG/8K/8AFGhzeHYNXijPhzWZbjfaa452+ZDwB5UiuwUKxO75ful4w/rX9lWzjiMEdR8xrlfjp8DPD37RHw9vPDfiOzWe1n+eKVMLPZygELNE2PlcZPqCCykFSynyb9nj4FfFzR/ifa3Xj7xxcX/h/wAExyWGjw2cpj/4SNXUgXV6MncURlQK5ZvMj3Z4Lz/N/XMxwuL9hUg6sKj92SsuVdVPbbo1vs9dTy/b4ujX9nKLnGT0a6d1L06Nb7b7+0iiiivqD3CT7bN/z1k/76NH2uX/AJ6Sdc/eNFFVJK7I6kdFFFSWf//Z' />
+	==================================================================================================================================================================================================================================================
+
+15.jpg  "красная галочка"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAASABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9R/jL+3Lr37JP7XkGh/FXQNH0v4NeMzBaeFvGNor+Xp995Y8211Qsdse9w7JIoVVQAksBM8H1TGLOZFZFgYMMjGK574y/B7w38fvhrq3hLxbpVrrXh/WoDb3drOvyuuQQQRgqysAyupDIyqykMAR8tfsef8EqtQ+A/wAdLPxR4z+IWuePdL+HUU2k/DWwupnX+wNPmQ+Y0+MLJPtke3GBsEUUZwMRR23m3xNOtypc8JPfZx737rt16PufZezyXG5f7aU/q+IpRs4qMpKt/K46+7K/x3ajb3o6+6/qo0UUV6x8qFFFFH2yafxMKKKKCj//2Q==' />
+	==================================================================================================================================================================================================================================================
+
+16.jpg  поле доп.этикеток 
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,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' />
+	==================================================================================================================================================================================================================================================
+
+17.jpg  "вертикальные стрелки"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAZACsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9o/iB8brH4fa81jdWsjswZ08qDeAokdBkmVefkPbvWF4G/az8OfEiHR59FZNQsdeEMlhe28azWtzHNtMcqSJcENGysGDLkEEEZrwH/grt8PL/AOLPwG+JPhrTNSvNJvta8Jalaw3FtatdOSxuv3ZiSCeR0kGY2WGJ5ijt5WJNhHhv/BE34F6x+zn+yh8NfC+t6pealeWusTzbJtNudPSyWTUZGEUcN1a2t0qHJkzcRly8rlWMXlAexDL6Ty2WNdT31NR5LPVOLblfbdJW9X2K9o/acltLbn3h+yJ8VdX+L37Pdr4m1prabVL3UtSj+SLy4okTVri3iRVUg4SJUUEksdoLFiSTleLP25vBPgH+zP7dvrTRf7av4tK0/wC3mK2+33kufKtot9yPMmfa22Ncs2DgHFUP+Cev/Jnej/8AYV1X/wBPlzX58f8ABVb9rvUv2Vf+FL/2d4V8XeJP+Eg8eWaXX9jC+G6CL79on2W5g867n8weRaz+ZBN5M2+Ntgqcny2ePxccJTV3K/VLZN7vToFWpyR5mfoL8Xf2pLyPQ/DTeHFWzk1LxnoWi3kk9oN32a6vAsoTMjrlkRkJIyA5K4bDD3SviPU9Sm1nwH4FvLjT7zSbi6+IXhGaWxumia4s2a6YmKQxO8ZdCdpMbumQdrMME/bledKNnY0jsfLfxqt/GPxqvNUt9Y/Z98Tapo9/FPYyW1z4m0Lyb60keQlJoWkkUhlkKshZlIJHI6878LPhp4i+CWm6Vp/hP9m/XPD+k6LN59npun+JtAtLOBvMMrbYoyqqGcsx2gZLE9Tmvsaiq9pPk9nd8t726X727hyq9zwP9n7SfG37P37Hmk6c3gPVNb8VLqV7I+i2+pWET26TancXSvJM83lY8pl4Rnbc6jGNxXzfW/h/4s8S2aW+pfs++KtQt47iG6SK58WaFKizQypNDIAxIDxyxpIrdVdFYYIBr7EoqYyad1uPlPj/AFH4ffETxjqPhPTo/hH4i8P2dn4w0XW72/vfEuk3aQw2l0Hf5IpA/wBxnPyhidoAHNfYFFFIZ//Z' />
+	==================================================================================================================================================================================================================================================
+
+18.jpg  печать "принтер"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAbABoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD92LpBFdSKOArkD86+Vv2ov+Cs/wAP/wBlf4jX/hzVdLvdQfSrv+zLy+k8V+FfDtrHfi0tL2Szj/tvV7CW4kjtdQ0+Z3gjkiUXsSmTzA6J6d+3n8f9c/Zn/Z61nxR4Y0P/AISPxLNrGkeH9JsMRt5l3qmrWmlwvskmt0l8uS8WTynuLdZfL2G4tw/nJ+a3ij4YftL/AAy8CaQmreD/AI2bbaW5E9z4dsLrTJNVvby8utSvL64s9D+J8Fv51xd3V1K7pboi+YsaCOJIYkjEYmlQpOtXkoxW7bsl6t6G3vPSO5+i/wCyX+2nZftban4it7LwV4s8MJ4etNMvftuo3+i6np+pR6hA9zALe70m/vYGkFuIJ2jaRXEN9Zy7THcRs3tNfkl/wTx8R/EZP+CrOs2N54j17Q/Hmq+KtV1L4r+AtY8Rtf3DaadIM8OrpZpqF3YWdv51/wCGLeDypJbkQJFYxt5ekajfat+ttbIa2OW/aH+A3g/9p/4V+JfAHj/w/YeKPB/iiB7PU9NvFJjnTcGUhlIZJEdVdJEKvG6I6MrKrD4z/wCIev4Q/wDQa/8AMUfDT/5l6+9aKAsfOv7B3/BMX4cf8E+NO1NfCP2/VtR1K6vLgahqVnptrJZJdzrcXEFvDp9ra20MckscRYpCHZLazhZ2gsrOK3+iqKKYH//Z' />
+	==================================================================================================================================================================================================================================================
+
+19.jpg  предварительный просмотр "принтер"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAaABkDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD92ft03/PaX/vs14p4V/4Kb/s8+O/FGm6Hof7QnwZ1nWtZuorHT9PsfHem3F1fXErhI4Yo0nLSSO7KqqoJYkAAk185/wDBXP8A4KF+Dfhtrrfs/wCv2LfZfGOl6dqHjC6uvFfhnQYrjwxd3N7DeWFqNX1Sxe4uLuPT57J2gZDaRX4uVm82OKGX41+D/wATfgb+0Xpfifxt8WfjZ8KdS+LWn+JNWu/EMWsi18QeLre0OoXGqaRF4Hv7XxBI2myR2skcUFtptxqAgvZtjLI6Pu2jFO+qX6+XqRicQ6XLaDldpO1tL9XdrRdbXave1k2v3B+3Tf8APaX/AL7NH26b/ntL/wB9mvF/+Cefxmvf2hP2FPhD4y1bxFo/izxBrvhHTZtd1TS7m1uLW51VbdEvwr2pNvuS7WdGWLCo6MoA24HsdSdZ8zftm/8ABO+f9pD4oWHj7wh48174e+NI9Lj0DU5IdY8QQ6XrWnxSzT24nttI1fS5WuLeW4uTDKZygS8uVeKUtC8Himn/APBEvxN4v+PHw18UfEP42ah4p8P/AA21+28UWmhQS+LJlm1O0uILi0uw+seJdThjkjMMkBIgIa3vrtMLK0E9v+glFArI8z/Zc/Y4+Gf7FXhfxDofwr8I6f4L0XxRr9z4m1DT7GSU2pv7hIkkeKN3ZYI9kMSrDCEiQIAiKK9MoooGf//Z' />
+	==================================================================================================================================================================================================================================================
+
+20.jpg  выбрать период "горизонтальные стрелки"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAUABgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9XLP9uzRdA+LfxE0XxoND8IaD4V8d6H8N/D2oSatJc33irWtS07T74QLZrbjyto1KBVKSzErFcyyCCOEsfTPih8d/CPwV1Dwna+LNfsdBl8c67F4a0M3bFI77UpYZporYPjajyLBIqbyoeTZGu6SRFb8z/wBtH/gizaf8FM/2tPi5fahqfjfwjq3h34m6NeZvLa9i0PX/AAzd+HPDlrfNp8ssUlp9uR9Pu1EsCyEvbRw3abGtpIeb+If/AAaA/CWK/wDDMfgj4gePrG1l1qP/AISmTWptPuJP7IEMzTJZxw2UQ+1PMLeNWmYxRo8rlJSixP8AWZdluS1aMJ4rFyhJ83MlTcuW3w2d1e/XsKdSqnaMbrpqfpp+yN8edU/aM+Co8Sa5oNh4Y1q017XfDuoadY6q+qWkNxpWr3ulyNFcvBbtJHI9m0iloYyFkAIyOSuD/wCCWHhWTwd+x5DaNpvi7SrWbxn4xvtPh8UW+oQay9hceKdWuLSa5XUALwyTW0sMu65/euJNz5LEkr5f0N7n0Rn/AAoHH/6qKKqXxFBnHrRRRUgf/9k=' />
+	==================================================================================================================================================================================================================================================
+
+21.jpg  общие документы "синие книжки"
+	==================================================================================================================================================================================================================================================
+	<img src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAATABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCz/wAFNv8Agvt8Vvg9+1z40+B3w48Xf8Iz4y0jxLLpsWra7aaPb+H9NtHjkcSSTTxu8hijkiZVKqzSRqCZgPJmoeP/APg5v17wl4P/ALUsdW8Uao19Lexaah0XTLVb5INiJdfOokS0lldo0lEZYNBOCgaMqfmP9tBv+Nzn7c3/AGI+unOef9RYV4v/AMFRPhv4b+Gmifs6N4f0HQ/D/wDwkH7Pfg/XNVOn2MVp/ad/Mbzzrufy1Blnk2rvkfLttGScCv0zhSOW4rOMJlONp64j21mkkoqjT59brVyelzHEc8KcqkHtb8XY/qM/Yd+Lmr/H/wDYq+D/AI88QNbtr3jbwTo2vakbeLyoTc3VjDPKUTnau+RsDPAwKK5n/glgc/8ABMT9nH/sl/hn/wBNVtRX53iI2qyUdrs7I7anQeNf2CvgX8VNc1bUPE/wX+E/iLUPEFzHfapdan4R0+7n1G4jWRI5pnkiLSSIjuqsxJAdgCAxzDJ/wT5+AdzrVvfyfBD4QyX1tqMmsQ3DeDtOM0V9IyNJdK3k5EzGKImQHcTGmT8owUUSqSTTT6E1PiPV9M0630fTbezs7eG1tbWJYYYYUCRwooAVVUcBQAAAOABRRRUy3ND/2Q==' />
+	==================================================================================================================================================================================================================================================
+
+-->
